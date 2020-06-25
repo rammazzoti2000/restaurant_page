@@ -1,3 +1,6 @@
+import homePage from './homePage';
+import menuPage from './menuPage';
+
 const navBar = () => {
   const mainContainer = document.getElementById('container');
 
@@ -49,6 +52,9 @@ const navBar = () => {
   ulNav.appendChild(contactLi);
 
   header.appendChild(ulNav);
+
+  homeLink.onclick = homePage;
+  menuLink.onclick = menuPage;
 };
 
 export { navBar as default };

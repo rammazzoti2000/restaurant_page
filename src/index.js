@@ -1,6 +1,8 @@
 import navBar from './navBar';
 import homePage from './homePage';
-import * as assets from './variables';
+// import slideControls from './slideControls';
+import menuPage from './menuPage';
+// import * as assets from './variables';
 
 // function component() {
 //   const element = document.getElementById('container');
@@ -15,5 +17,7 @@ import * as assets from './variables';
 // document.body.appendChild(component());
 window.onload = () => {
   navBar();
+  menuPage();
   homePage();
+  // slideControls();
 };
