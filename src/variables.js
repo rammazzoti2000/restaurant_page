@@ -5,8 +5,8 @@ import Image3 from './assets/images/img3.jpg';
 import Facebook from './assets/icons/facebook.png';
 import Twitter from './assets/icons/twitter.png';
 import Instagram from './assets/icons/instagram.png';
-import Left from './assets/icons/left.png'
-import Right from './assets/icons/right.png'
+import Left from './assets/icons/left.png';
+import Right from './assets/icons/right.png';
 
 export const parOne = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget urna molestie, efficitur mi quis, lobortis sapien. Sed auctor porta massa, at luctus ante molestie non.';
 

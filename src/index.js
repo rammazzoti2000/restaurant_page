@@ -1,6 +1,6 @@
 import navBar from './navBar';
 import homePage from './homePage';
-import * as assets from './variables';
+// import * as assets from './variables';
 
 // function component() {
 //   const element = document.getElementById('container');
