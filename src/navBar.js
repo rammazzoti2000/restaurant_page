@@ -22,6 +22,7 @@ const navBar = () => {
   const contactLi = document.createElement('li');
 
   const homeLink = document.createElement('a');
+  homeLink.className = 'active';
   homeLink.innerText = 'Home';
   homeLink.href = '#';
 
