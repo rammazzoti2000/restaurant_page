@@ -1,4 +1,5 @@
 import navBar from './navBar';
+import homePage from './homePage';
 import * as assets from './variables';
 
 // function component() {
@@ -14,4 +15,5 @@ import * as assets from './variables';
 // document.body.appendChild(component());
 window.onload = () => {
   navBar();
+  homePage();
 };
