@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#content {
+  position: relative;
+  padding: 0 100px;
+  min-height: 100vh;
+}
+
+#content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: #333;
+  z-index: -2;
+}
+
+#content::after {
+  content: 'Healthy';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 18vw;
+  font-weight: 700;
+  color: #000;
+  opacity: 0.04;
+  z-index: -2;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.tabs .logo {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.tabs .logo span {
+  color: #78ff00;
+}
+
+#homePage,
+#aboutUs,
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  padding: 0 0 50px;
+}
+
+#homePage .bannerImg,
+#menu .bannerImg,
+#aboutUs .bannerImg {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  background: black;
+}
+
+.icons .sci li {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.icons .sci li:hover img {
+  transform: translateY(-10px);
+}
+
+#homePage .bannerImg img,
+#menu .bannerImg img,
+#aboutUs .bannerImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.buttonWrapper {
+  position: relative;
+  display: flex;
+}
+
+.buttonWrapper button {
+  position: relative;
+  margin: 0 20px;
+  font-size: 18px;
+  padding: 4px 10px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonWrapper button:nth-child(2),
+.buttonWrapper button:nth-child(3) {
+  color: #fff;
+}
+
+.buttonWrapper button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #78ff00;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.buttonWrapper button:hover::before,
+.buttonWrapper button.active::before {
+  width: 40px;
+}
+
+#content .bannerText,
+#menu .bannerText {
+  position: relative;
+  max-width: 500px;
+  margin-right: 50px;
+}
+
+#content .bannerText h1,
+#menu .bannerText h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: #333;
+}
+
+#content .bannerText p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8em;
+  margin: 20px 0;
+}
+
+#content .bannerText a {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px;
+}
+
+#content .bannerText a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #78ff00;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+#content .bannerText a:hover::before {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.icons .sci,
+.icons .controls {
+  position: relative;
+  display: flex;
+}
+
+.icons .controls li {
+  list-style: none;
+  margin-left: 20px;
+  cursor: pointer;
+  filter: invert(1);
+  transition: 0.5s ease-in-out;
+}
+
+.icons .controls li:hover {
+  opacity: 0.5;
+}
+
+.menuIcon {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  #content {
+    padding: 20px 50px;
+  }
+
+  #content::before {
+    display: none;
+  }
+
+  .tabs {
+    padding: 0;
+  }
+
+  #content .bannerText h1 {
+    font-size: 30px;
+  }
+
+  #homePage,
+  #aboutUs,
+  .card {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+
+  #homePage .bannerImg,
+  #aboutUs .bannerImg,
+  #menu .bannerImg {
+    width: 100%;
+    height: 40vh;
+    margin: 20px 0;
+  }
+
+  #homePage .bannerText,
+  #aboutUs .bannerText,
+  #menu .bannerText {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .buttonWrapper button {
+    color: #333 !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #content {
+    padding: 20px 30px;
+  }
+
+  .tabs {
+    flex-flow: column nowrap;
+  }
+
+  #content .bannerText {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .buttonWrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .buttonWrapper button {
+    margin: 0;
+  }
+}
