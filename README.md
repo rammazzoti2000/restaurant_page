@@ -94,7 +94,7 @@ To have this app on your pc, you need to:
 
 ## Live Demo
 
-[Live Demo](https://rammazzoti2000.github.io/restaurant_page/) :point_left:
+[Live Demo](https://raw.githack.com/rammazzoti2000/restaurant_page/feature/readme_instructions/dist/index.html) :point_left:
 
 <!-- CONTACT -->
 ## Contributors
