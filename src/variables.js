@@ -41,13 +41,22 @@ export const readMe = document.createElement('a');
 readMe.innerText = 'Read More';
 readMe.href = '#';
 
-// export const readMe2 = document.createElement('a');
-// readMe2.innerText = 'Read More';
-// readMe2.href = '#';
-//
-// export const readMe3 = document.createElement('a');
-// readMe3.innerText = 'Read More';
-// readMe3.href = '#';
+export const readMe2 = document.createElement('a');
+readMe2.innerText = 'Read More';
+readMe2.href = '#';
+
+export const readMe3 = document.createElement('a');
+readMe3.innerText = 'Read More';
+readMe3.href = '#';
+
+export const readMe4 = document.createElement('a');
+readMe4.innerText = 'Read More';
+readMe4.href = '#';
+
+export const readMe5 = document.createElement('a');
+readMe5.innerText = 'Read More';
+readMe5.href = '#';
+
 
 export const imageOne = new Image();
 imageOne.src = Image1;
