@@ -10,15 +10,23 @@ const aboutUs = () => {
   tabClass.value = 'tabContent';
   thisTab.setAttributeNode(tabClass);
 
-  const header = document.createElement('h1');
-  const headerText = document.createTextNode('About Us');
-  header.appendChild(headerText);
-  thisTab.appendChild(header);
+  const bannerText = document.createElement('div');
+  bannerText.className = 'bannerText';
 
-  const story = document.createElement('p');
-  story.append(assets.parFive);
-  thisTab.append(assets.imageFive);
-  thisTab.appendChild(story);
+  const bannerImg = document.createElement('div');
+  bannerImg.className = 'bannerImg';
+
+  const paragraph = document.createElement('p');
+
+  const paragraphText = document.createTextNode(assets.parFive);
+  paragraph.appendChild(paragraphText);
+
+  bannerText.appendChild(assets.titleSix);
+  bannerText.appendChild(paragraph);
+  thisTab.append(bannerText);
+  bannerImg.appendChild(assets.imageFive);
+  thisTab.append(bannerImg);
+
   content.appendChild(thisTab);
 };
 

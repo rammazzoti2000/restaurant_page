@@ -18,7 +18,7 @@ export const parThree = 'Sed auctor porta massa, at luctus ante molestie non. Vi
 
 export const parFour = 'Sed auctor porta massa, at luctus ante molestie non. Vivamus malesua est vitae finibus pulvinar. Integer nulla ipsum, accumsan et maximus vel, aliquet quis arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hemenaeos.';
 
-export const parFive = 'Phasellus bibendum sapien eu varius sodales. Donec molestie fringilla est, sed ornare turpis bibendum vel. Aliquam aliquet vehicula nulla, non cursus lorem tempus non. Etiam interdum vitae justo id scelerisque. Aliquam erat volutpat. Ut quis eros vitae mauris euismod sagittis ac rhoncus lacus. Cras lacinia vitae lectus vitae lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus neque, eleifend quis congue eu, placerat pellentesque mi. Sed lacus enim, eleifend nec ullamcorper nec, dictum pretium mi. Nulla interdum, dui a viverra eleifend, risus orci mollis lectus, sed rhoncus eros diam a velit. Ut pretium vestibulum tortor vitae malesuada. Aliquam molestie lacus vel enim fermentum mattis. Etiam sodales cursus est. Sed eleifend at enim ut auctor. Quisque non lectus urna.';
+export const parFive = 'Phasellus bibendum sapien eu varius sodales. Donec molestie fringilla est, sed ornare turpis bibendum vel. Aliquam aliquet vehicula nulla, non cursus lorem tempus non. Etiam interdum vitae justo id scelerisque. Aliquam erat volutpat. Ut quis eros vitae mauris euismod sagittis ac rhoncus lacus. Cras lacinia vitae lectus vitae lobortis.';
 
 export const titleOne = document.createElement('h1');
 titleOne.innerHTML = 'Eat Healthy<br>Stay Healthy';
@@ -34,6 +34,9 @@ titleFour.innerHTML = 'Good Food<br>Good Mood';
 
 export const titleFive = document.createElement('h1');
 titleFive.innerHTML = 'Good Food<br>Good Mood';
+
+export const titleSix = document.createElement('h1');
+titleSix.innerHTML = 'About Us';
 
 export const buttons = document.getElementsByClassName('navLink');
 
