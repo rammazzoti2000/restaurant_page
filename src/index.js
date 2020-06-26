@@ -1,4 +1,4 @@
-import homePage from './initialPage';
+import homePage from './home';
 import menu from './menu';
 import aboutUs from './about';
 
@@ -18,7 +18,7 @@ tabs.innerHTML = '<a href="#" class="logo">Good<span>Food</span></a>';
 const tabsContainer = document.createElement('div');
 tabsContainer.className = 'buttonWrapper';
 
-function openTab(evt) {
+const openTab = (evt) => {
   const currentTabBtn = document.querySelector('.active');
   currentTabBtn.className = currentTabBtn.className.replace(' active', '');
   const parent = document.querySelector('#content');
@@ -28,7 +28,7 @@ function openTab(evt) {
   evt.currentTarget.className += ' active';
   const fn = evt.currentTarget.attributes.getNamedItem('data-tab-function').value;
   tabFunctions[fn]();
-}
+};
 
 const homePageBtn = document.createElement('button');
 const homePageBtnText = document.createTextNode('Home');

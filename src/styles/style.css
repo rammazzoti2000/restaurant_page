@@ -76,6 +76,15 @@
   background: black;
 }
 
+.icons .sci li {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.icons .sci li:hover img {
+  transform: translateY(-10px);
+}
+
 #homePage .bannerImg img,
 #menu .bannerImg img,
 #aboutUs .bannerImg img {
@@ -92,6 +101,7 @@
   position: relative;
   display: flex;
 }
+
 .buttonWrapper button {
   position: relative;
   margin: 0 20px;
@@ -172,6 +182,7 @@
   z-index: -1;
   transition: 0.5s ease-in-out;
 }
+
 #content .bannerText a:hover::before {
   width: 100%;
 }
@@ -187,21 +198,6 @@
 .icons .controls {
   position: relative;
   display: flex;
-}
-
-.icons .sci li {
-  list-style: none;
-  margin-right: 30px;
-}
-
-.icons .sci li img {
-  display: inline-block;
-  max-height: 24px;
-  transition: 0.5s ease-in-out;
-}
-
-.icons .sci li:hover img {
-  transform: translateY(-10px);
 }
 
 .icons .controls li {
@@ -259,10 +255,6 @@
     padding-right: 0;
   }
 
-  heading.active ul {
-    display: initial;
-  }
-
   .buttonWrapper button {
     color: #333 !important;
   }
@@ -279,13 +271,5 @@
 
   #content .bannerText {
     margin-right: 0;
-  }
-
-  .menuIcon {
-    right: 30px;
-  }
-
-  .icons .controls li img {
-    max-width: 40px;
   }
 }

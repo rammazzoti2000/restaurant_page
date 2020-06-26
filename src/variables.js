@@ -30,7 +30,7 @@ export const titleThree = document.createElement('h1');
 titleThree.innerHTML = 'Good Food<br>Good Mood';
 
 export const titleFour = document.createElement('h1');
-titleFour.innerHTML = 'Good Food<br>Good Mood';
+titleFour.innerHTML = 'Cheap and <br>Healthy';
 
 export const titleFive = document.createElement('h1');
 titleFive.innerHTML = 'Good Food<br>Good Mood';
