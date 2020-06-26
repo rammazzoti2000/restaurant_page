@@ -10,7 +10,6 @@ const menu = () => {
   tabClass.value = 'tabContent';
   thisTab.setAttributeNode(tabClass);
 
-  // First
   const divOne = document.createElement('div');
   divOne.className = 'card';
 
@@ -29,7 +28,6 @@ const menu = () => {
   bannerText.append(paragraph1);
   bannerText.append(assets.readMe2);
 
-  // Second
   const divTwo = document.createElement('div');
   divTwo.className = 'card';
 
@@ -48,7 +46,6 @@ const menu = () => {
   bannerText2.append(paragraph2);
   bannerText2.append(assets.readMe3);
 
-  // Third
   const divThree = document.createElement('div');
   divThree.className = 'card';
 
@@ -67,7 +64,6 @@ const menu = () => {
   bannerText3.append(paragraph3);
   bannerText3.append(assets.readMe4);
 
-  // Four
   const divFour = document.createElement('div');
   divFour.className = 'card';
 
