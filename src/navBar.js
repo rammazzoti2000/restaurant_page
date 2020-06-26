@@ -1,3 +1,6 @@
+import homePage from './homePage';
+import menuPage from './menuPage';
+
 const navBar = () => {
   const mainContainer = document.getElementById('container');
 
@@ -22,20 +25,27 @@ const navBar = () => {
   const contactLi = document.createElement('li');
 
   const homeLink = document.createElement('a');
-  homeLink.className = 'active';
+  homeLink.className = 'active navLink';
+  homeLink.id = 'home';
   homeLink.innerText = 'Home';
   homeLink.href = '#';
 
   const menuLink = document.createElement('a');
+  menuLink.className = 'navLink';
   menuLink.innerText = 'Menu';
+  menuLink.id = 'menu';
   menuLink.href = '#';
 
   const aboutLink = document.createElement('a');
+  aboutLink.className = 'navLink';
   aboutLink.innerText = 'About';
+  aboutLink.id = 'about';
   aboutLink.href = '#';
 
   const contactLink = document.createElement('a');
+  contactLink.className = 'navLink';
   contactLink.innerText = 'Contact';
+  contactLink.id = 'contact';
   contactLink.href = '#';
 
   homeLi.appendChild(homeLink);
@@ -49,6 +59,9 @@ const navBar = () => {
   ulNav.appendChild(contactLi);
 
   header.appendChild(ulNav);
+
+  homeLink.onclick = homePage;
+  menuLink.onclick = menuPage;
 };
 
 export { navBar as default };

@@ -6,13 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#container {
+#content {
   position: relative;
   padding: 0 100px;
   min-height: 100vh;
 }
 
-#container::before {
+#content::before {
   content: '';
   position: absolute;
   top: 0;
@@ -23,7 +23,7 @@
   z-index: -2;
 }
 
-#container::after {
+#content::after {
   content: 'Healthy';
   position: absolute;
   bottom: 0;
@@ -35,14 +35,14 @@
   z-index: -2;
 }
 
-header {
+.tabs {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
 }
 
-header .logo {
+.tabs .logo {
   font-weight: 700;
   text-transform: uppercase;
   color: #333;
@@ -50,35 +50,56 @@ header .logo {
   font-size: 30px;
 }
 
-header .logo span {
+.tabs .logo span {
   color: #78ff00;
 }
 
-header ul {
-    position: relative;
-    display: flex;
+#homePage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
 
-header ul li {
-  list-style: none;
-  margin: 0 20px;
-}
-
-header ul li a {
+#homePage .bannerImg {
   position: relative;
-  text-decoration: none;
+  width: 440px;
+  height: 440px;
+  background: black;
+}
+
+#homePage .bannerImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.buttonWrapper {
+  position: relative;
+  display: flex;
+}
+.buttonWrapper button {
+  position: relative;
+  margin: 0 20px;
   font-size: 18px;
   padding: 4px 10px;
   color: #333;
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-header ul li:nth-child(3) a,
-header ul li:nth-child(4) a {
+.buttonWrapper button:nth-child(2),
+.buttonWrapper button:nth-child(3) {
   color: #fff;
 }
 
-header ul li a::before {
+.buttonWrapper button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -90,33 +111,19 @@ header ul li a::before {
   transition: 0.5s ease-in-out;
 }
 
-header ul li a:hover::before,
-header ul li a.active::before {
+.buttonWrapper button:hover::before,
+.buttonWrapper button.active::before {
   width: 40px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-}
 
-.content .bannerText {
+#content .bannerText {
   position: relative;
   max-width: 500px;
   margin-right: 50px;
 }
 
-.content .bannerText div {
-  display: none;
-}
-
-.content .bannerText div.active {
-  display: initial;
-}
-
-.content .bannerText h2 {
+#content .bannerText h1 {
   font-size: 54px;
   text-transform: uppercase;
   font-weight: 700;
@@ -124,14 +131,14 @@ header ul li a.active::before {
   color: #333;
 }
 
-.content .bannerText p {
+#content .bannerText p {
   font-size: 18px;
   color: #333;
   line-height: 1.8em;
   margin: 20px 0;
 }
 
-.content .bannerText a {
+#content .bannerText a {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
@@ -143,7 +150,7 @@ header ul li a.active::before {
   padding: 15px;
 }
 
-.content .bannerText a::before {
+#content .bannerText a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -154,29 +161,8 @@ header ul li a.active::before {
   z-index: -1;
   transition: 0.5s ease-in-out;
 }
-.content .bannerText a:hover::before {
+#content .bannerText a:hover::before {
   width: 100%;
-}
-
-.content .bannerImg {
-    position: relative;
-    width: 440px;
-    height: 440px;
-    background: #000;
-}
-.content .bannerImg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-  opacity: 0;
-}
-
-.content .bannerImg img.active {
-  opacity: 1;
 }
 
 .icons {
@@ -224,97 +210,58 @@ header ul li a.active::before {
 }
 
 @media only screen and (max-width: 992px) {
-  #container {
+  #content {
     padding: 20px 50px;
   }
 
-  #container::before {
+  #content::before {
     display: none;
   }
 
-  header {
+  .tabs {
     padding: 0;
   }
 
-  .icons .controls li {
-    filter: invert(0);
-  }
-
-  .content .bannerText h2 {
+  #content .bannerText h1 {
     font-size: 30px;
   }
 
-  .content {
+  #homePage {
     margin-top: 0;
     flex-direction: column-reverse;
   }
 
-  .content .bannerImg {
+  #homePage .bannerImg {
     width: 100%;
     height: 40vh;
     margin: 20px 0;
   }
 
-  .content .bannerText {
+  #homePage .bannerText {
     max-width: 100%;
     padding-right: 0;
-  }
-
-  header ul {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    z-index: 10000;
-    padding: 100px 0;
-  }
-
-  header ul li {
-    padding: 20px;
-    text-align: center;
   }
 
   heading.active ul {
     display: initial;
   }
 
-  header ul li a {
+  .buttonWrapper button {
     color: #333 !important;
-    font-size: 36px;
   }
-
-  header ul li a:hover::before,
-  header ul li a.active::before {
-    width: 100%;
-  }
-
-  /* .menuIcon {
-    display: initial;
-    position: fixed;
-    right: 50px; */
-    /* padding: 8px; */
-    /* cursor: pointer;
-    z-index: 100000;
-    background: #fff url("../images/icons/menu.png");
-    width: 34px;
-    height: 34px;
-    background-repeat: no-repeat;
-    background-position: 6px;
-  } */
-
-  /* header.active .menuIcon {
-    background: #fff url("../images/icons/close.png");
-    background-repeat: no-repeat;
-    background-position: 6px;
-  } */
 }
 
 @media only screen and (max-width: 767px) {
-  #container {
+  #content {
     padding: 20px 30px;
+  }
+
+  .tabs {
+    flex-flow: column nowrap;
+  }
+
+  #content .bannerText {
+    margin-right: 0;
   }
 
   .menuIcon {
