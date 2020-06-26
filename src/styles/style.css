@@ -273,3 +273,14 @@
     margin-right: 0;
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .buttonWrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .buttonWrapper button {
+    margin: 0;
+  }
+}
