@@ -86,8 +86,6 @@ To have this app on your pc, you need to:
      $ npm install
   ```
   - and open `index.html` file from `/dist folder` in the browser
-  - to build the app for production, run the following command:
-    `$ npm run build-prop`
 
 ## Automated Test
  > No automated tests yet
